@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CreateTodo from './CreateTodo';
 import Tasks from './Tasks';
-// import uuid from 'uuid';
+import uuid from 'uuid';
 
 
 class App extends Component {
@@ -14,6 +14,10 @@ class App extends Component {
   }
 
   componentWillMount() {
+    console.log(this.state.todos)
+  }
+
+  componentDidUpdate() {
     console.log(this.state.todos)
   }
 
@@ -35,7 +39,7 @@ class App extends Component {
   createTask = (value) => {
     if (value !== "") {
       const newTask = {
-        id: 1,
+        id: uuid.v4(),
         task: value,
         completed: false
       }

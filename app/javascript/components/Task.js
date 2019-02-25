@@ -23,10 +23,12 @@ const Task = ({ todo, onDeleteTask, onCompleteTask, activateEdit }) =>
       {todo.task}
     </span>
 
-    <button
-      className='task-delete-button'
-      onClick={onDeleteTask.bind(null, todo.id)}
-    >
-      -
-    </button>
+    <form action='/todo' data-remote='true'>
+      <input name='id' value={todo.id}/>
+      <input
+        value='-'
+        type='submit'
+        className='task-delete-button'
+        onClick={onDeleteTask.bind(null, todo.id)} />
+    </form>
   </div>

@@ -15,17 +15,18 @@ class CreateTodo extends React.Component {
 
   render() {
     return (
-      <div className="create-todo">
+      <form action='/todo/new' className="create-todo" data-remote='true'>
         <input
+          name='task'
           placeholder='Enter the task'
           className='create-todo-input'
           type="text"
           onChange={this.handleChange}
-          onKeyPress={this.props.handleEnter.bind(null, this.state.inputValue)} />
-        <button
+           />
+        <input
           className="create-todo-button"
-          type='submit' onClick={this.props.createTodo.bind(null, this.state.inputValue)}>+</button>
-      </div>
+          type='submit' onClick={this.props.createTodo.bind(null, this.state.inputValue)} />
+      </form>
     );
   }
 }
