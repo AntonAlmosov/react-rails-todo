@@ -1,0 +1,87 @@
+// Place all the styles related to the Todo controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.todo-wrapper{
+  width: 335px;
+  margin: 200px;
+  font-family: 'Inter';
+}
+
+.create-todo{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-todo-input{
+  border: 0;
+  outline: none;
+  background-color: #F3F3F3;
+  width: 290px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 11px 10px;
+  font-size: 14px;
+  color: #858383;
+}
+
+.create-todo-button{
+  width: 51px;
+  height: 50px;
+  color: white;
+  border: 0;
+  background-color: black;
+}
+
+.task-wrapper{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: #F3F3F3;
+}
+
+.task-done-button{
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  border: 0;
+  outline: none;
+}
+
+.task-done-button-state{
+  background-color: green;
+}
+
+.task-name{
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.task-done{
+  text-decoration: line-through;
+}
+
+.task-delete-button{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #DA2F2F;
+  border: 0;
+  outline: none;
+  right: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.task-editing{
+  margin-left: 10px;
+  font-size: 14.6px;
+  border: 0;
+  outline: none;
+  background-color: #F3F3F3;
+}
